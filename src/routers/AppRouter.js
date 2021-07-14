@@ -3,14 +3,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect
 } from "react-router-dom";
-import DcScreen from '../components/dc/DcScreen';
-import LoginScreen from '../components/login/LoginScreen';
-import MarvelScreen from '../components/marvel/MarvelScreen';
 
-import Navbar from '../components/ui/Navbar';
+import LoginScreen from '../components/login/LoginScreen';
 import DashboardRoutes from './DashboardRoutes';
 
 const AppRouter = () => {

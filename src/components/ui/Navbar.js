@@ -4,15 +4,18 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link
         className="navbar-brand"
         to="/">
-        Asociaciones
+        Home
       </Link>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <div className="navbar-collapse">
-        <div className="navbar-nav">
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="navbar-nav mr-auto">
           <NavLink
             activeClassName="active"
             className="nav-item nav-link"
@@ -29,20 +32,23 @@ const Navbar = () => {
           >
             DC
           </NavLink>
+          <NavLink
+            activeClassName="active"
+            className="nav-item nav-link"
+            to="/search"
+          >
+            Search
+          </NavLink>
 
         </div>
       </div>
 
       <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul className="navbar-nav ml-auto">
-          <NavLink
-            activeClassName="active"
-            className="nav-item nav-link"
-            exact={true}
-            to="/login"
-          >
-            Login
-          </NavLink>
+          <form className="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          </form>
         </ul>
       </div>
 
