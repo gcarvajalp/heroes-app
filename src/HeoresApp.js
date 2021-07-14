@@ -1,10 +1,9 @@
 import React from 'react'
+import AppRouter from './routers/AppRouter'
 
 const HeoresApp = () => {
   return (
-    <div>
-      <h1>Heroes</h1>
-    </div>
+    <AppRouter />
   )
 }
 
