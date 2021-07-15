@@ -3,7 +3,7 @@ import HeroList from '../heroes/HeroList'
 
 const MarvelScreen = () => {
   return (
-    <div>
+    <div className="animate__animated animate__fadeIn">
       <h1>Marvel </h1>
       <hr />
       <HeroList publisher="Marvel Comics" />

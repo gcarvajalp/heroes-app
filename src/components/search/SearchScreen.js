@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import queryString from 'query-string';
 
-import { heroes } from '../../data/heroes';
 import { useForm } from '../../hooks/useForm';
 import HeroCard from '../heroes/HeroCard';
 import { getHeroesByName } from '../../selectors/getHeroesByName';
@@ -11,7 +10,9 @@ import { getHeroesByName } from '../../selectors/getHeroesByName';
 const SearchScreen = ({ history }) => {
 
   const location = useLocation();
+
   const { q = '' } = queryString.parse(location.search);
+  console.log(q);
 
   const [formValues, handleInputChange] = useForm({
     search: q
@@ -19,11 +20,7 @@ const SearchScreen = ({ history }) => {
 
   const { search } = formValues;
 
-  const heroesFiltered = getHeroesByName(search);
-
-  useEffect(() => {
-    console.log('useEffect');
-  }, [])
+  const heroesFiltered = useMemo(() => getHeroesByName(q), [q])
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -31,33 +28,47 @@ const SearchScreen = ({ history }) => {
   }
 
   return (
-    <div>
-      <h1>Search... {search}</h1>
-      <hr />
-      {/* <div className="row">
-        <div className="col-12">
-          <form onSubmit={handleSearch}>
-            <div className="">
+    <div className="animate__animated animate__fadeIn">
+      <h1>Search</h1>
 
-              <input
-                type="text"
-                placeholder="Find your hero"
-                className="form-control"
-                name="search"
-                autoComplete="off"
-                value={search}
-                onChange={handleInputChange}
-              />
-              <button
-                type="submit"
-                className="btn btn-outline-primary">
-                Seach...
-              </button>
-            </div>
-          </form>
+      <form className="p-2" onSubmit={handleSearch}>
+        <div className="input-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Search heroes..."
+            name="search"
+            value={search}
+            onChange={handleInputChange}
+          ></input>
+          <button
+            type="submit"
+            className="btn btn-primary">
+            Search
+          </button>
         </div>
-      </div> */}
-      <div className="card-columns animate__animated animate__fadeIn">
+      </form>
+
+      <hr />
+
+      {(q === '')
+        && (
+          <div class="alert alert-info" role="alert">
+            you have not searched yet
+          </div>
+        )
+      }
+
+      {
+        (q !== '' && heroesFiltered.length === 0)
+        && (
+          <div class="alert alert-danger" role="alert">
+            Superheroes not found, please verify your search...
+          </div>
+        )
+      }
+
+      <div className="card-columns">
 
         {
           heroesFiltered.map(hero => (
