@@ -16,7 +16,7 @@ const DashboardRoutes = () => {
     <>
       <Navbar />
 
-      <div className="container mt-4">
+      <div className="container mt-2">
         <Switch>
           <Route exact={true} path="/marvel" component={MarvelScreen} />
           <Route exact={true} path="/hero/:heroeId" component={HeroScreen} />

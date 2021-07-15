@@ -3,7 +3,7 @@ import React from 'react'
 const HomeScreen = () => {
   return (
     <header className="masthead">
-      <div className="container d-flex h-100 align-items-center justify-content-center">
+      <div className="d-flex h-100 align-items-center justify-content-center">
         <div className="d-flex justify-content-center">
           <div className="text-center">
             <img src="./hero.svg" width="140" height="140" class="d-inline-block align-top" alt=""></img>
