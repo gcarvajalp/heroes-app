@@ -12,23 +12,19 @@ const HeroCard = ({
   characters }) => {
 
   return (
-    <div className="card ms-3" style={{ maxWidth: 540 }}>
-      <div className="row no-gutters">
-        <div className="col-md-4">
+    <div className="card ms-3 bg-dark" style={{ maxWidth: 540 }}>
+      {/* <div className="row no-gutters">
+        <div className="col-md-5">
           <img
             src={`./assets/heroes/${id}.jpg`}
             alt={superhero}
             className="card-img" />
 
         </div>
-        <div className="col-md-8">
+        <div className="col-md-7">
           <div className="card-body">
             <h5 className="card-title">{superhero}</h5>
             <p className="card-text">{alter_ego}</p>
-            {
-              (alter_ego !== characters)
-              && (<p className="card-text" >{characters}</p>)
-            }
             <p className="card-text">
               <small className="text-muted">{first_appearance}</small>
             </p>
@@ -38,8 +34,22 @@ const HeroCard = ({
 
           </div>
         </div>
+      </div> */}
+
+
+      <img src={`./assets/heroes/${id}.jpg`} className="card-img-top" alt={superhero}></img>
+      <div className="card-body">
+        <h4 className="card-title text-center">{superhero}</h4>
+        <h6 className="card-title text-center">{alter_ego}</h6>
+        <Link to={`./hero/${id}`} className="btn btn-primary btn-block">
+          Más info!
+        </Link>
+
       </div>
+
+
     </div>
+
   )
 }
 

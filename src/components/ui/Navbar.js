@@ -8,7 +8,7 @@ const Navbar = () => {
       <Link
         className="navbar-brand"
         to="/">
-        Home
+        <img src="./hero.svg" width="40" height="40" class="d-inline-block align-top" alt=""></img>
       </Link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
