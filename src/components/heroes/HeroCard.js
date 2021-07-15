@@ -42,7 +42,7 @@ const HeroCard = ({
         <h4 className="card-title text-center">{superhero}</h4>
         <h6 className="card-title text-center">{alter_ego}</h6>
         <Link to={`./hero/${id}`} className="btn btn-primary btn-block">
-          Más info!
+          More info!
         </Link>
 
       </div>

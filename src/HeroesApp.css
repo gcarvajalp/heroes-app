@@ -5,3 +5,8 @@
 .card-title{
   color: white;
 }
+
+.masthead{
+  height: 90vh;
+  padding: 0;
+}

@@ -13,7 +13,7 @@ const SearchScreen = () => {
     search: ''
   });
 
-  const {search}= formValues;
+  const { search } = formValues;
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -23,11 +23,11 @@ const SearchScreen = () => {
     <div>
       <h1>Search</h1>
       <hr />
-      <div className="row">
-        <div className="col-5">
-          <h4>Search form</h4>
-          <hr />
+      {/* <div className="row">
+        <div className="col-12">
           <form onSubmit={handleSearch}>
+            <div className="">
+
             <input
               type="text"
               placeholder="Find your hero"
@@ -42,12 +42,12 @@ const SearchScreen = () => {
               className="btn btn-outline-primary">
               Seach...
             </button>
+            </div>
           </form>
         </div>
-        <div className="col-7">
-          <h4>Results</h4>
-          <hr />
-
+      </div> */}
+      <div className="card-columns animate__animated animate__fadeIn">
+          
           {
             heroesFiltered.map(hero => (
               <HeroCard
@@ -57,7 +57,6 @@ const SearchScreen = () => {
             ))
           }
 
-        </div>
       </div>
     </div>
   )

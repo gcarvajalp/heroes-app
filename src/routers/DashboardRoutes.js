@@ -6,10 +6,10 @@ import {
 } from "react-router-dom";
 import DcScreen from '../components/dc/DcScreen';
 import HeroScreen from '../components/heroes/HeroScreen';
+import HomeScreen from '../components/home/HomeScreen';
 import MarvelScreen from '../components/marvel/MarvelScreen';
 import SearchScreen from '../components/search/SearchScreen';
 import Navbar from '../components/ui/Navbar';
-import Navbar2 from '../components/ui/Navbar2';
 
 const DashboardRoutes = () => {
   return (
@@ -22,6 +22,7 @@ const DashboardRoutes = () => {
           <Route exact={true} path="/hero/:heroeId" component={HeroScreen} />
           <Route exact={true} path="/dc" component={DcScreen} />
           <Route exact={true} path="/search" component={SearchScreen} />
+          <Route exact={true} path="/" component={HomeScreen} />
           <Redirect to="/marvel" />
         </Switch>
       </div>
