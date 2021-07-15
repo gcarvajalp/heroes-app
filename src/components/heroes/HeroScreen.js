@@ -44,7 +44,7 @@ const HeroScreen = ({ history }) => {
         <button
           className="btn btn-outline-primary"
           onClick={handleReturn}>
-          Volver
+          Go Back!
         </button>
 
       </div>
