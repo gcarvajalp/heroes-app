@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/HeroesApp.css"],"names":[],"mappings":"AAAA,QACE,gCACF,CAEA,YACE,UACF,CAEA,UACE,WAAY,CACZ,SACF","file":"main.662aada5.chunk.css","sourcesContent":[".navbar{\n  box-shadow: 0 5px 20px -10px #000;\n}\n\n.card-title{\n  color: white;\n}\n\n.masthead{\n  height: 90vh;\n  padding: 0;\n}"]}
