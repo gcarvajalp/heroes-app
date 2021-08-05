@@ -8,11 +8,6 @@ const Navbar = () => {
 
   const { navbar, dispatch } = useContext(NavContext);
 
-  //console.log(navbar);
-  const handleButton = (e) => {
-    //console.log(e);
-  }
-
   useEffect(() => {
     console.log('click en el boton');
   }, [navbar])
@@ -33,7 +28,7 @@ const Navbar = () => {
         aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation"
-        onClick={handleButton}>
+        >
         <span className="navbar-toggler-icon"></span>
       </button>
 
