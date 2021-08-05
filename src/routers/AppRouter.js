@@ -20,7 +20,7 @@ const AppRouter = () => {
       <div>
         <Switch>
           <Route
-            path={`heroes-app/`}
+            path={`/heroes-app`}
             component={DashboardRoutes}
           />
           <Route
