@@ -13,7 +13,7 @@ const DcScreen = () => {
     dispatch({
       type: types.close
     })
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="animate__animated animate__fadeIn">

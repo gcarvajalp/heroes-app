@@ -3,8 +3,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useRouteMatch,
-  useLocation,
   Redirect
 } from "react-router-dom";
 
@@ -13,15 +11,14 @@ import LoginScreen from '../components/login/LoginScreen';
 import DashboardRoutes from './DashboardRoutes';
 
 const AppRouter = () => {
-
   
   return (
-    <Router>
+    <Router basename={window.location.pathname.replace(/(\/[^/]+)$/, "")}>
       <div>
         <Switch>
           <Route
-            path={`/heroes-app`}
-            component={DashboardRoutes}
+            path={`/login`}
+            component={LoginScreen}
           />
           <Route
             path={`/`}

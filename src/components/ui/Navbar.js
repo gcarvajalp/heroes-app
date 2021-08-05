@@ -1,12 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { NavContext } from '../../reducers/NavContext';
-import { types } from '../../types/types';
+// import { types } from '../../types/types';
 
 
 const Navbar = () => {
 
-  const { navbar, dispatch } = useContext(NavContext);
+  const { navbar } = useContext(NavContext);
 
   useEffect(() => {
     console.log('click en el boton');
