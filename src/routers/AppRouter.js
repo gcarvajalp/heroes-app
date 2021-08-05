@@ -20,9 +20,8 @@ const AppRouter = () => {
       <div>
         <Switch>
           <Route
-            exact={true}
-            path={`/login`}
-            component={LoginScreen}
+            path={`heroes-app/`}
+            component={DashboardRoutes}
           />
           <Route
             path={`/`}
