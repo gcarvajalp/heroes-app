@@ -1,7 +1,20 @@
-import React from 'react'
-import HeroList from '../heroes/HeroList'
+import React, { useContext, useEffect } from 'react'
+import { NavContext } from '../../reducers/NavContext';
+import { types } from '../../types/types';
+import HeroList from '../heroes/HeroList';
+
+
 
 const DcScreen = () => {
+
+  const { dispatch } = useContext(NavContext);
+
+  useEffect(() => {
+    dispatch({
+      type: types.close
+    })
+  }, []);
+
   return (
     <div className="animate__animated animate__fadeIn">
       <h1>DC</h1>

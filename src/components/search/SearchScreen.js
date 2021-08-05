@@ -12,7 +12,6 @@ const SearchScreen = ({ history }) => {
   const location = useLocation();
 
   const { q = '' } = queryString.parse(location.search);
-  console.log(q);
 
   const [formValues, handleInputChange] = useForm({
     search: q
@@ -53,7 +52,7 @@ const SearchScreen = ({ history }) => {
 
       {(q === '')
         && (
-          <div class="alert alert-info" role="alert">
+          <div className="alert alert-info" role="alert">
             you have not searched yet
           </div>
         )
@@ -62,7 +61,7 @@ const SearchScreen = ({ history }) => {
       {
         (q !== '' && heroesFiltered.length === 0)
         && (
-          <div class="alert alert-danger" role="alert">
+          <div className="alert alert-danger" role="alert">
             Superheroes not found, please verify your search...
           </div>
         )
