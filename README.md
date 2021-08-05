@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Demo
 
-[**DEMO HERE**](https://gc-heroes-app.herokuapp.com/)
+[**DEMO HERE**](https://gcarvajalp.github.io/heroes-app/)
 
 
 ## Available Scripts
