@@ -25,7 +25,7 @@ const AppRouter = () => {
             component={LoginScreen}
           />
           <Route
-            path={`/`}
+            path={`heroes-app/`}
             component={DashboardRoutes}
           />
 
