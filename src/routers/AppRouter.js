@@ -25,11 +25,11 @@ const AppRouter = () => {
             component={LoginScreen}
           />
           <Route
-            path={`/heroes-app/`}
+            path={`/`}
             component={DashboardRoutes}
           />
 
-          <Redirect to={`/heroes-app`} />
+          <Redirect to={`/`} />
         </Switch>
       </div>
     </Router>
